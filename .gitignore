@@ -1,0 +1,13 @@
+/terraform/.terraform.lock.hcl
+/terraform/.terraform/
+/terraform/terraform.tfstate
+/terraform/terraform.tfstate.backup
+/terraform/.terraform.tfstate.lock.info
+/terraform/.DS_Store
+/.DS_Store
+/terraform/dumps/.DS_Store
+/terraform/.DS_Store
+/terraform/.DS_Store
+/terraform/terraform.tfvars
+/terraform/.DS_Store
+/terraform/dumps/create_tables.sql

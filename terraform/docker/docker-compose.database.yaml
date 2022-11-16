@@ -1,0 +1,30 @@
+version: '3.6'
+services:
+  postgres:
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      # POSTGRES_HOST_AUTH_METHOD: all
+
+  # dataseeder:
+  #   image: ghcr.io/fwartner/c37-berlin-hasura-tf:main
+  #   environment:
+  #     DB_CONNECTION: pgsql
+  #     DB_HOST: 10.2.0.5
+  #     DB_PORT: 5432
+  #     DB_DATABASE: postgres
+  #     DB_USERNAME: postgres
+  #     DB_PASSWORD: postgres
+volumes:
+  db_data:
+
+networks:
+  database:
