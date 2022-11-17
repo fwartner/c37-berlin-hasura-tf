@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    hcloud = {
+      source  = "hetznercloud/hcloud"
+      version = "1.35.2"
+    }
+  }
+}
+
 resource "hcloud_firewall" "firewall" {
   name = var.firewall_name
   rule {

@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    hcloud = {
+      source  = "hetznercloud/hcloud"
+      version = "1.35.2"
+    }
+  }
+}
+
 resource "hcloud_server" "database" {
   name        = "demo-berlin-database"
   image       = "ubuntu-20.04"
